@@ -8,7 +8,9 @@
     <section class="band band-a">
       <div class="band-container">
         <div class="band-inner">
-          <p>{{ device }}</p>
+          <p>{{ data['device'] }}</p>
+          <a href="{{ url_for('turn_on', cid=data['cid']) }}"><button>Turn on</button></a>
+          <a href="{{ url_for('turn_off', cid=data['cid']) }}"><button>Turn off</button></a>
         </div>
       </div>
     </section>
