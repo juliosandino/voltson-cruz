@@ -72,7 +72,7 @@ body {
 }
 
 .band-inner {
-  display: table-cell;
+  display: inline-block;
   vertical-align: middle;
   padding: 3em 0 4em;
 }
@@ -199,6 +199,51 @@ body {
   top: 8px;
   width: 16px;
   left: 0;
+}
+
+.card {
+    /* Add shadows to create the card effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+    transition: 0.3s;
+    background-color: white;
+    border-radius: 5px; /* 5px rounded corners */
+}
+
+.card-container {
+    display: grid;
+    padding: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 2rem;
+}
+
+.card__title {
+    font-size: 2rem;
+    padding: .5rem;
+}
+
+.card__description {
+    padding: .5rem;
+    line-height: 1.6em;
+}
+
+.button {
+    display: block;
+    background-color: gray;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    transition: .3s ease-out;
+}
+
+/* Add rounded corners to the top left and the top right corner of the image */
+img {
+    border-radius: 5px 5px 0 0;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 @media screen and (max-width: 980px) {
