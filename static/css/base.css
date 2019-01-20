@@ -213,8 +213,8 @@ body {
 .card-container {
     display: grid;
     padding: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
+    grid-gap: 1.5rem;
 }
 
 .card__title {
