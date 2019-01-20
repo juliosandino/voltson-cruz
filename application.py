@@ -20,8 +20,17 @@ def hello():
     return render_template('index.html', information=information)
 
 @app.route("/device/<cid>")
-def show_user(cid):
-    pass
+def device(cid):
+    device = api.get_detail(cid)
+    return render_template('device.html', device=device)
+
+@app.route("/test/")
+def test():
+    devices = api.get_devices()
+    information = {}
+    information['devices'] = devices
+
+    return render_template('test.html', information=information)
 
 if __name__ == "__main__":
     app.run()
