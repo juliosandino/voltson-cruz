@@ -1,6 +1,6 @@
 from flask import Flask
 from flask import render_template
-from vesync.api import VesynApi
+from vesync.api import VesyncApi
 
 app = Flask(__name__)
 
@@ -13,8 +13,11 @@ app.config.update(
 
 @app.route("/")
 def hello():
-    api.get_devices()
-    return render_template('index.html')
+    devices = api.get_devices()
+    information = {}
+    information['devices'] = devices
+
+    return render_template('base.html', information=information)
 
 @app.route("/device/<cid>")
 def show_user(cid):
