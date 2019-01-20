@@ -17,7 +17,7 @@ def hello():
     information = {}
     information['devices'] = devices
 
-    return render_template('base.html', information=information)
+    return render_template('index.html', information=information)
 
 @app.route("/device/<cid>")
 def show_user(cid):
